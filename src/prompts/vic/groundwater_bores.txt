@@ -1,0 +1,21 @@
+## Section: Groundwater Bores (Victoria)
+
+Generate the Groundwater Utilisation subsection for a Victorian PSI report, based on bore data.
+
+### Interpretation Rules
+
+VIC format — narrative only, no 5-bore table:
+- Report the total number of registered groundwater bores within the search buffer (typically 2km)
+- Identify and describe the closest bore: bore ID, distance, direction, total depth, purpose/use type
+- Note the general pattern of bore usage in the area (stock, domestic, irrigation, monitoring)
+- If construction details are available for the closest bore, mention casing depth and screen interval
+- If driller's log is available, briefly describe the lithological sequence
+
+Do NOT generate a 5-bore summary table for VIC reports. The VIC format uses a narrative description of the closest bore and a total count.
+
+### Output Format
+
+This content forms subsection 3.3.1 Groundwater Utilisation.
+
+### Extracted Data
+{{ section_data }}

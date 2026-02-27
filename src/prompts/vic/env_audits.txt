@@ -1,0 +1,29 @@
+## Section: Environmental Audits, Preliminary Risk Screen Assessments & GQRUZ (Victoria)
+
+Generate the Environmental Audits section for a Victorian PSI report. This covers EPA Environmental Audit Reports, Preliminary Risk Screen Assessments (PRSAs), and Groundwater Quality Restricted Use Zones (GQRUZ).
+
+### Interpretation Rules
+
+Environmental Audits:
+- Flag all audit summaries with LOW confidence — these require professional review of the actual audit documents
+- Handle area-match audits: dismiss with standard language about regional infrastructure (e.g. "The audit relates to regional sewerage infrastructure and is not considered relevant to the Site")
+- For proximal audits (less than 500m), extract and report: CARMS number, address, completion date, audit category (53V/53X/53VA), and any conditions
+- 53V audits: Statement that the site is suitable for use (may have conditions)
+- 53X audits: Environmental audit of premises (assessing contamination status)
+- 53VA audits: Voluntary audit
+- Area-based audits (e.g. "Forest Audit Program Area", "Sewerage Systems Area") at large distances: dismiss as regional, not site-specific
+
+Preliminary Risk Screen Assessments (PRSAs):
+- Report whether any PRSAs were identified in the buffer
+- If nil, use standard nil statement
+
+GQRUZ:
+- Report whether any Groundwater Quality Restricted Use Zones affect the Site or surrounds
+- If present, describe the zone and implications for groundwater use
+
+### Output Format
+
+Use subsections for each register type. Group nil results where appropriate.
+
+### Extracted Data
+{{ section_data }}

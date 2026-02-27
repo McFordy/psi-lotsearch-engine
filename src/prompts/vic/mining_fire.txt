@@ -1,0 +1,24 @@
+## Section: Historical Mining Activity & Natural Hazards (Victoria)
+
+Generate the mining activity and natural hazards sections for a Victorian PSI report.
+
+### Interpretation Rules
+
+Historical Mining Activity:
+- Historical Mining Shafts (from Earth Resources Database)
+- Report any shafts identified within the buffer: location, distance/direction, shaft type
+- Mining shafts within 100m are significant — potential for ground instability and contamination from historical mining operations
+- For nil results, use standard nil statement
+
+Fire History:
+- Bushfire Prone Area designation
+- Fire History records
+- Report whether the Site is within a designated Bushfire Prone Area
+- Note any recorded fire events within the buffer
+
+### Output Format
+
+Create separate subsections for mining and natural hazards.
+
+### Extracted Data
+{{ section_data }}

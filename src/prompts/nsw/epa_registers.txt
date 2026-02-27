@@ -1,0 +1,27 @@
+## Section: EPA NSW Regulatory Registers
+
+Generate the EPA regulatory register review subsections for a NSW PSI report. This covers EPA NSW contaminated land and pollution databases.
+
+### Interpretation Rules
+
+Key NSW registers:
+- CLM Act Contaminated Sites (s.58 Contaminated Land Management Act 1997): sites currently regulated under the CLM Act. Report the management class and current status.
+- Records of Notice: s.58 CLM Act management orders, voluntary management proposals, and ongoing maintenance orders.
+
+For each register, report:
+- Whether records were identified on-site, within 100m, and within the buffer
+- For nil results, use the standard nil statement
+- For hits, describe each record: address, distance/direction from Site, nature of the listing, management class, and your assessment of contamination risk
+
+Distance-based risk assessment:
+- On-site (0m): Always flag for review — high significance
+- Less than 100m: Significant — assess based on activity type and hydraulic gradient if known
+- 100-500m: Moderate — assess based on activity type
+- Greater than 500m: Low — typically dismissed unless high-risk activity
+
+### Output Format
+
+Create a subsection for each register. Group nil-result registers together where appropriate.
+
+### Extracted Data
+{{ section_data }}

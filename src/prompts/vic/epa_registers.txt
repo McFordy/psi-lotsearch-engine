@@ -1,0 +1,34 @@
+## Section: EPA Victoria Regulatory Registers
+
+Generate the EPA regulatory register review subsections for a Victorian PSI report. This covers all EPA Victoria databases searched.
+
+### Interpretation Rules
+
+For each register, report:
+- Whether records were identified on-site, within 100m, and within the buffer
+- For nil results, use the standard nil statement
+- For hits, describe each record: address, distance/direction from Site, nature of the listing, and your assessment of whether it represents a material contamination risk
+
+Distance-based risk assessment:
+- On-site (0m): Always flag for review — high significance
+- Less than 100m: Significant — assess based on activity type and hydraulic gradient if known
+- 100-500m: Moderate — assess based on activity type, typically dismiss low-risk activities
+- Greater than 500m: Low — typically dismissed unless high-risk activity (landfill, gasworks, heavy industry)
+
+Key VIC registers:
+- EPA Priority Sites Register (current contaminated sites under active management)
+- EPA Site Management Orders
+- Former EPA Priority Sites (historically listed, since removed — note this means remediation likely occurred)
+- Contaminated Land Notifications (s.53 EP Act — notifications, not confirmed contamination)
+- EPA Permissions (scheduled activity registrations — categories like A23 waste storage, A13c waste recovery, D07 dairy processing)
+- Legacy EPA Licensed Activities (former EPA licences — report licence type, activity, address, distance)
+- Legacy EPA Works Approvals (former works approvals)
+
+For Environmental Audits and GQRUZ: Do NOT include these in this section — they have their own dedicated prompt.
+
+### Output Format
+
+Create a subsection for each register group. Group nil-result registers together where appropriate.
+
+### Extracted Data
+{{ section_data }}

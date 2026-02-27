@@ -1,0 +1,21 @@
+## Section: Groundwater Bores (New South Wales)
+
+Generate the Groundwater Utilisation subsection for a NSW PSI report, based on bore data.
+
+### Interpretation Rules
+
+NSW format — 5-bore summary table required:
+- Report the total number of registered groundwater bores within the search buffer
+- Generate a summary table of the 5 closest bores with columns:
+  | Bore ID | Distance (m) | Direction | Total Depth (m) | Purpose | SWL (m bgl) |
+- SWL = Standing Water Level (metres below ground level), if available
+- Below the table, provide a brief narrative describing the general pattern of bore usage
+- Note the dominant bore purposes (stock, domestic, monitoring, irrigation)
+- If construction details are available for the closest bore, mention them in the narrative
+
+### Output Format
+
+This content forms subsection 3.3.1 Groundwater Utilisation.
+
+### Extracted Data
+{{ section_data }}

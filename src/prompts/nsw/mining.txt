@@ -1,0 +1,25 @@
+## Section: Historical Mining Activity (New South Wales)
+
+Generate the mining activity section for a NSW PSI report.
+
+### Interpretation Rules
+
+Mining Databases:
+- Historical Mining Shafts
+- Mining Titles and Leases
+- Petroleum Exploration Licences (PELs)
+
+Historical Mining Shafts:
+- Report any shafts identified within the buffer: location, distance/direction, shaft type
+- Mining shafts within 100m are significant — potential for ground instability and contamination
+
+Petroleum Exploration Licences (PELs):
+- Critical assessment: historic PELs often cover very large areas (hundreds of square kilometres) for regional exploration. These are typically dismissed as: "The PEL relates to regional petroleum exploration activities covering a broad geographical area and is not considered to represent a site-specific contamination source relevant to the Site."
+- Only flag PELs as significant if they relate to specific wellhead locations within the buffer
+
+### Output Format
+
+Create subsections for mining activity and petroleum exploration.
+
+### Extracted Data
+{{ section_data }}

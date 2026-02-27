@@ -1,0 +1,31 @@
+## Section: Summary of Site History Table (Victoria)
+
+Generate the Lotsearch-derived rows of the Summary of Site History table in Markdown table format.
+
+### Interpretation Rules
+
+The table should summarise key findings from the Lotsearch report in a format suitable for inclusion in Section 4.9 of a PSI report.
+
+Table columns:
+| Year/Period | Source | Information | Relevance to Contamination |
+
+Include rows for:
+- Historical business directory findings (PCAs identified at or near Site)
+- EPA register findings (any hits)
+- Environmental audit findings (any proximal audits)
+- Waste/landfill findings
+- PFAS findings (if any)
+- Aerial imagery observations (include placeholder rows with <!-- MODULE_4_INPUT: aerial imagery interpretation --> for each aerial image year)
+
+Include placeholder rows for non-Lotsearch data sources:
+- <!-- MANUAL_INPUT: Council records search results -->
+- <!-- MANUAL_INPUT: SafeWork/WorkSafe records -->
+- <!-- MANUAL_INPUT: Title search results -->
+- <!-- SHAREPOINT_INPUT: Previous environmental reports -->
+
+### Output Format
+
+Output a single Markdown table with all rows. Use placeholder comments for data not available from Lotsearch.
+
+### Extracted Data
+{{ section_data }}

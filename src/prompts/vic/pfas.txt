@@ -1,0 +1,23 @@
+## Section: PFAS Investigation & Management Programs
+
+Generate the PFAS section for a PSI report. This covers all PFAS-related databases.
+
+### Interpretation Rules
+
+Databases covered:
+- EPA PFAS Site Investigations (state-level investigations)
+- Defence PFAS Investigation & Management Program — Investigation Sites
+- Defence PFAS Investigation & Management Program — Management Sites
+- Airservices Australia National PFAS Management Program
+- Defence Controlled Areas (may contain PFAS-relevant sites)
+
+For nil results across all programs: combine into a single statement noting that no PFAS investigation or management sites were identified within the search buffers.
+
+For hits: report each site with name, address, distance/direction, and current status. PFAS sites within 2km are significant. Note whether the site is under active investigation or management.
+
+### Output Format
+
+Single section covering all PFAS programs. Group nil results together.
+
+### Extracted Data
+{{ section_data }}

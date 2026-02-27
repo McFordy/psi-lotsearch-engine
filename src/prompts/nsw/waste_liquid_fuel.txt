@@ -1,0 +1,24 @@
+## Section: Waste Management Facilities, Landfills & Liquid Fuel Facilities (New South Wales)
+
+Generate the waste management and liquid fuel facilities section for a NSW PSI report.
+
+### Interpretation Rules
+
+Waste Management Facilities:
+- National Waste Management Facilities Database
+- Former Waste Disposal Sites
+- Licensed waste facilities
+
+For each hit, report: facility name/owner, address, distance/direction, facility type, status (active/closed).
+Landfills within 500m are significant — flag for review regarding potential landfill gas and leachate migration.
+
+Liquid Fuel Facilities:
+- Former Gasworks: historically significant contamination sources (coal tar, PAHs, heavy metals). Flag any within 1km.
+- National Liquid Fuel Facilities: service stations, fuel depots, terminals. Assess based on distance and type.
+
+### Output Format
+
+Create subsections for waste management and liquid fuel facilities separately.
+
+### Extracted Data
+{{ section_data }}

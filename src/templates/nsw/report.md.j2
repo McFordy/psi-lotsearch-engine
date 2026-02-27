@@ -1,0 +1,130 @@
+# PSI Report Sections — Draft Output
+
+**Site Address:** {{ state_id.address }}
+**State:** {{ state_id.state }}
+**Lotsearch Reference:** {{ state_id.lotsearch_reference }}
+**Generated:** {{ generation_date }}
+**Engine:** Lotsearch PSI Extraction Engine v0.1.0
+
+> **Note:** This is an AI-generated draft. All sections require professional review before inclusion in a final PSI report. Sections tagged with LOW confidence or REVIEW REQUIRED flags need particular attention.
+
+---
+
+## Confidence Summary
+
+| Level | Count |
+|-------|-------|
+| HIGH | {{ confidence_counts.HIGH }} |
+| MEDIUM | {{ confidence_counts.MEDIUM }} |
+| LOW | {{ confidence_counts.LOW }} |
+
+{% if review_flags %}
+### Items Requiring Review
+
+{% for flag in review_flags %}
+- {{ flag }}
+{% endfor %}
+{% endif %}
+
+---
+
+## Section 3: Environmental Setting
+
+{% if sections.get("3_env_setting") %}
+{{ sections["3_env_setting"].prose }}
+{% else %}
+<!-- EXTRACTION_ONLY: Environmental setting data not interpreted -->
+{% endif %}
+
+{% if sections.get("3.3.1_groundwater_bores") %}
+{{ sections["3.3.1_groundwater_bores"].prose }}
+{% endif %}
+
+---
+
+## Section 4: Desktop Site History Review
+
+### 4.1 Historical Business Directory Records
+
+{% if sections.get("4.1_business_dirs") %}
+{{ sections["4.1_business_dirs"].prose }}
+{% else %}
+<!-- EXTRACTION_ONLY: Business directory data not interpreted -->
+{% endif %}
+
+### 4.2 Historical Aerial Photographs
+
+<!-- MANUAL_INPUT: Historical aerial photograph interpretation required. Insert aerial photo review table here. -->
+
+| Year | Source | On-site Observations | Off-site Observations |
+|------|--------|---------------------|----------------------|
+| <!-- MODULE_4_INPUT: Future aerial photo AI module --> | | | |
+
+### 4.3 EPA NSW Regulatory Databases
+
+{% if sections.get("4.3_epa_registers") %}
+{{ sections["4.3_epa_registers"].prose }}
+{% else %}
+<!-- EXTRACTION_ONLY: EPA register data not interpreted -->
+{% endif %}
+
+{% if sections.get("4.3_poeo_licences") %}
+### 4.4 POEO Act Licences
+
+{{ sections["4.3_poeo_licences"].prose }}
+{% endif %}
+
+### 4.5 PFAS Investigations
+
+{% if sections.get("4.4_pfas") %}
+{{ sections["4.4_pfas"].prose }}
+{% else %}
+<!-- EXTRACTION_ONLY: PFAS data not interpreted -->
+{% endif %}
+
+### 4.6 Waste Management and Liquid Fuel Facilities
+
+{% if sections.get("4.5_waste_liquid_fuel") %}
+{{ sections["4.5_waste_liquid_fuel"].prose }}
+{% else %}
+<!-- EXTRACTION_ONLY: Waste/liquid fuel data not interpreted -->
+{% endif %}
+
+### 4.7 Historical Mining Activities
+
+{% if sections.get("4.6_mining") %}
+{{ sections["4.6_mining"].prose }}
+{% else %}
+<!-- EXTRACTION_ONLY: Mining data not interpreted -->
+{% endif %}
+
+### 4.8 Defence Sites
+
+{% if sections.get("4.8_defence") %}
+{{ sections["4.8_defence"].prose }}
+{% else %}
+<!-- EXTRACTION_ONLY: Defence data not interpreted -->
+{% endif %}
+
+### 4.9 Summary of Site History
+
+{% if sections.get("4.9_site_history") %}
+{{ sections["4.9_site_history"].prose }}
+{% else %}
+<!-- MANUAL_INPUT: Summary of Site History table to be completed manually -->
+
+| Year/Period | Source | Information | Relevance to Contamination |
+|------------|--------|-------------|---------------------------|
+| <!-- MANUAL_INPUT: Complete site history table --> | | | |
+{% endif %}
+
+---
+
+## References
+
+- Contaminated Land Management Act 1997 (NSW)
+- Protection of the Environment Operations Act 1997 (NSW)
+- State Environmental Planning Policy (Resilience and Hazards) 2021 (NSW)
+- National Environment Protection (Assessment of Site Contamination) Measure 2013 (NEPM 2013)
+- AS 4482.1-2005 Guide to the investigation and sampling of sites with potentially contaminated soil — Part 1: Non-volatile and semi-volatile compounds
+- Lotsearch Enviro Professional Report — {{ state_id.lotsearch_reference }}

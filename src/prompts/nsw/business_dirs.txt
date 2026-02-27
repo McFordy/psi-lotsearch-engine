@@ -1,0 +1,24 @@
+## Section: Historical Business Directory Records (New South Wales)
+
+Generate the Historical Business Directory section for a NSW PSI report.
+
+### Interpretation Rules
+
+- Distinguish premise-match (0m, on-site) from road-match (same road) and area-match (general area)
+- Premise matches are the most significant — these indicate the business was likely at or very near the Site
+- Flag potentially contaminating activities (PCAs): dry cleaners, service stations, motor garages, chemical manufacturers, metal works, tanneries, printers, photographic studios, paint/varnish manufacturers
+- For non-contaminating businesses (grocers, drapers, newsagents, bakers), note their presence but state they are not considered to represent a contamination risk
+- Group similar entries together
+- Report the date range of directory records searched
+- For road and area matches beyond the immediate Site, note the distance and assess relevance
+
+### Output Format
+
+Summarise findings by category:
+1. On-site or premise-match PCAs (most significant)
+2. Nearby PCAs within 100m
+3. PCAs within the buffer but beyond 100m
+4. Summary statement about non-contaminating businesses
+
+### Extracted Data
+{{ section_data }}

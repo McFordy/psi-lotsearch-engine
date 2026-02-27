@@ -1,0 +1,24 @@
+## Section: Defence Sites & Unexploded Ordnance (New South Wales)
+
+Generate the defence sites section for a NSW PSI report.
+
+### Interpretation Rules
+
+Databases covered:
+- Defence Controlled Areas
+- Defence 3 Year Regional Contamination Investigation Program
+- National Unexploded Ordnance (UXO) register
+
+For nil results across all databases: combine into a single statement.
+
+For hits:
+- Defence Controlled Areas: note the area name, distance, and relevance
+- UXO sites: flag for review — any UXO designation within the buffer requires professional assessment
+- Regional contamination investigation sites: note the investigation status and relevance
+
+### Output Format
+
+Single section covering all defence-related databases.
+
+### Extracted Data
+{{ section_data }}

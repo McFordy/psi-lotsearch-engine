@@ -1,0 +1,35 @@
+## Section: Environmental Setting (Victoria)
+
+Generate the Environmental Setting section (Section 3) for a Victorian PSI report. This section covers topography, regional geology, regional hydrogeology, groundwater utilisation, and surface water hydrology.
+
+### Interpretation Rules
+
+Topography: Describe the general topographic setting using elevation data. Reference the elevation dataset and describe the local terrain.
+
+Regional Geology: Use the geological unit name, map symbol, and description from the Victorian 1:50,000 geological mapping. Include the lithological description. If soils data is available, include soil type. If Acid Sulfate Soil (ASS) data is present, note the probability classification. If Naturally Occurring Asbestos (NOA) data is present, include it.
+
+Regional Hydrogeology: Classify groundwater beneficial use using ERS Segments:
+- Segment A1: TDS 0-600 mg/L (potable)
+- Segment A2: TDS 601-1,200 mg/L (potable with treatment)
+- Segment B: TDS 1,201-3,100 mg/L (agriculture/irrigation)
+- Segment C: TDS 3,101-5,400 mg/L (stock watering)
+- Segment D: TDS 5,401-7,100 mg/L (limited beneficial use)
+- Segment E: TDS >7,100 mg/L (no beneficial use)
+Reference the Environment Reference Standard (Vic) (ERS) and cite the TDS range and beneficial use.
+Include groundwater depth information if available from the watertable depth dataset.
+
+Groundwater Utilisation (VIC format): Report the total number of bores within 2km. Describe the closest bore with its ID, distance, direction, depth, and purpose. Do NOT generate a 5-bore table for VIC — just the count and closest bore narrative.
+
+Surface Water Hydrology: Identify the nearest waterway/water body and its distance and direction from the Site.
+
+### Output Format
+
+Use these headings:
+### 3.1 Topography
+### 3.2 Regional Geology
+### 3.3 Regional Hydrogeology
+#### 3.3.1 Groundwater Utilisation
+### 3.4 Surface Water Hydrology
+
+### Extracted Data
+{{ section_data }}

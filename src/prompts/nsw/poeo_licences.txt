@@ -1,0 +1,27 @@
+## Section: POEO Act Licences (New South Wales)
+
+Generate the POEO Act licence review section for a NSW PSI report. This covers current, delicensed, and former Protection of the Environment Operations Act 1997 licences.
+
+### Interpretation Rules
+
+Critical assessment: For each licence, determine whether it is:
+1. Site-specific: A licence for a specific premises conducting a scheduled activity (relevant to contamination assessment)
+2. Area/network-based: A licence covering a large area or network (e.g. Murray Irrigation Ltd covers a whole irrigation region, Sydney Water covers the entire sewer network). These are typically NOT relevant to site-specific contamination assessment.
+
+For site-specific licences, report: licence number, premises name, address, scheduled activity, distance/direction, and status (current/surrendered/revoked).
+
+For area/network-based licences, note their presence but state: "This licence relates to [regional infrastructure/network operations] and is not considered to represent a site-specific contamination source relevant to the Site."
+
+Licence categories to watch for (potentially contaminating):
+- Waste storage, treatment, or disposal
+- Chemical production or storage
+- Metal processing
+- Petroleum storage or handling
+- Contaminated soil treatment
+
+### Output Format
+
+Separate subsections for current licences, delicensed premises, and former licences. Group nil results together.
+
+### Extracted Data
+{{ section_data }}

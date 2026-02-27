@@ -1,0 +1,27 @@
+## Section: Waste Management Facilities, Landfills & Liquid Fuel Facilities (Victoria)
+
+Generate the waste management and liquid fuel facilities section for a Victorian PSI report.
+
+### Interpretation Rules
+
+Waste Management Facilities:
+- National Waste Management Facilities Database
+- Statewide Waste and Resource Recovery Infrastructure Plan Facilities
+- Legacy EPA Prescribed Industrial Waste records
+- EPA Victorian Landfill Register
+- Former Waste Disposal Sites (historical landfills from council records)
+
+For each hit, report: facility name/owner, address, distance/direction, facility type, status (active/closed).
+Landfills within 500m are significant — flag for review regarding potential landfill gas and leachate migration.
+Former waste disposal sites: note the fill type, prior use, and current use.
+
+Liquid Fuel Facilities:
+- Former Gasworks: historically significant contamination sources (coal tar, PAHs, heavy metals). Flag any within 1km.
+- National Liquid Fuel Facilities: service stations, fuel depots, terminals. Assess based on distance and type.
+
+### Output Format
+
+Create subsections for waste management and liquid fuel facilities separately.
+
+### Extracted Data
+{{ section_data }}
